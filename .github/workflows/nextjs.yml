@@ -74,7 +74,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Run dev Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} dev
+        run: npm run dev
 
   # Deployment job
   deploy:
