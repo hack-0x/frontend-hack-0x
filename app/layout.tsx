@@ -1,8 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+// import { Web3ProviderWrapper } from '../contexts/Web3Provider';
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata: Metadata = {
   title: 'Hack0x',
@@ -16,7 +16,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
+
+
+// import React from 'react';
+
+// function MyApp({ Component, pageProps }) {
+//   return (
+//     <Web3ProviderWrapper>
+//       <Component {...pageProps} />
+//     </Web3ProviderWrapper>
+//   );
+// }
+
+// export default MyApp;

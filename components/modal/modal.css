@@ -1,0 +1,7 @@
+.modal-box{
+    width: 38.333333%;
+    height: fit-content;
+    margin: auto;   
+    background: linear-gradient(49deg, rgba(46,46,46,1) 84%, rgba(217,74,75,1) 100%);
+    /* background: linear-gradient(214deg, rgba(46,46,46,1) 84%, rgba(217,74,75,1) 100%); */
+}    
