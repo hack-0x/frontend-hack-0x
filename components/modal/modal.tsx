@@ -33,7 +33,7 @@ const Modal = ({
     <ReactPortal wrapperId='react-portal-modal-container'>
         <>
         <div className='fixed top-0 left-0 w-screen h-screen opacity-60 backdrop-blur-md bg-white/40' />
-        <div className='modal-box fixed rounded-3xl flex flex-col overflow-hidden p-5 bg-zinc-800 inset-y-32 inset-x-32 '>
+        <div className='modal-box h-screen fixed rounded-3xl flex flex-col overflow-hidden p-5 bg-zinc-800 inset-y-32 inset-x-32 '>
             <button 
                 onClick={handleClose}
                 className='py-2 px-8 self-end text-white'>

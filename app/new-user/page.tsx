@@ -18,16 +18,19 @@ const Manifesto = ({
     const router = useRouter()
 
     const handleSignManifesto = () => { 
-        setModalType('descriptionModal')
+        setModalType('descriptionModal')        
+        // if(modalType === "descriptionModal"){
+        //     //todo: set based on the return data
+        //     setSignInStatus("success");
+        // }
+    }
+
+    useEffect(()=>{
         if(modalType === "descriptionModal"){
             //todo: set based on the return data
             setSignInStatus("success");
         }
-    }
-
-//     useEffect(()=>{
-// handleSignManifesto();
-//     },[modalType]);
+    },[modalType]);
 
     const handleClaimNFT = () => {
         // todo: redirect to h-file page
@@ -35,7 +38,7 @@ const Manifesto = ({
 
     }
 
-    if(modalType === 'descriptionModal'){
+    if(modalType === 'descriptionModal' && signInStatus === 'failed'){
         return (
             <Modal 
                 isOpen={isOpen}
@@ -67,15 +70,16 @@ const Manifesto = ({
             handleAction={handleClaimNFT}
             submitButtonText='claim' 
             >
-                                <div className='font-mono text-center text-stone-300 py-2 box-border border-solid border-2 rounded-3xl'>
-                    <h1>you made it 🏴‍☠️ claim your hacktivist card below</h1>
+                                <div className='h-fit font-mono text-center  text-stone-300 py-2 box-border border-solid border-2 rounded-3xl'>
+                    <h1 className='h-auto font-medium text-2xl pt-6 pb-4'>you made it 🏴‍☠️ claim your hacktivist card below</h1>
                     <Image 
-                    className="w-15 h-15" 
+                    className="mx-8 my-6 w-15 h-60 border" 
                     // src={avatarSrc} 
+                    
                     alt="project logo"
                     />
                 </div>
-        This success NFT claim
+        
     </Modal>
     )
 }
