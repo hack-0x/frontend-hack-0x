@@ -2,9 +2,10 @@
 
 import CustomCard from "@/components/card";
 import Image from 'next/image'
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Manifesto from "./new-user/page";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { useAccount } from 'wagmi'
 
 const labels = [
   { label: '#label1', value: '#skill-needed1' },
@@ -14,10 +15,18 @@ const labels = [
 
 
 export default function Home() {
+  const { isConnected } = useAccount()
   const [modalOpen, setModalOpen] = useState<boolean>(false);
+  
   const closeModal = () => {
     setModalOpen(false);
   };
+useEffect(() =>{
+  if(isConnected){
+    setModalOpen(true)
+  }
+}, [isConnected]);
+
   return (
     <main className="p-24 bg-black min-h-screen ${}">
       <div className="flex justify-start gap-4 text-white text-center pb-8">
@@ -63,7 +72,7 @@ export default function Home() {
           <p className="mt-4 mb-10">
           we use profit-sharing to disrupt the founder proprietary paradigm - and create a sustainable model for open-source and public goods".
           </p>
-          <ConnectButton label="hack" />
+          <ConnectButton label="hack" chainStatus="none"/>
           {/* <button className="mt-6 px-4 py-2 bg-white text-black rounded hover:bg-blue-600"
               onClick={() => setModalOpen(!modalOpen)
               }  >

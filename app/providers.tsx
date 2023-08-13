@@ -16,8 +16,8 @@ import {
   mainnet,
   polygon,
   optimism,
-  arbitrum,
   goerli,
+  optimismGoerli,
 } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 
@@ -26,7 +26,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
     mainnet,
     polygon,
     optimism,
-    arbitrum,
+    optimismGoerli,
     ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [goerli] : []),
   ],
   [publicProvider()]

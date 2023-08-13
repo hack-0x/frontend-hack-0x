@@ -28,7 +28,7 @@ const Manifesto = ({
     useEffect(()=>{
         if(modalType === "descriptionModal"){
             //todo: set based on the return data
-            setSignInStatus("success");
+            // setSignInStatus("success");
         }
     },[modalType]);
 
