@@ -1,72 +1,53 @@
-import React, {useState} from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+"use client"
 
-interface SideNavBarProps {
-    isConnected: boolean;
-    isSidebarOpen: boolean;
-    children: React.ReactNode;
+import { useSelectedLayoutSegment } from "next/navigation"
+import { Wallet2, Workflow, ShoppingCart, Bell, Unplug } from "lucide-react"
+import Link from "next/link"
+
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(' ')
 }
 
-const Sidebar = ({
-  isConnected,
-  isSidebarOpen
-}: SideNavBarProps) => {
+const Sidebar = () => {
+  const segment = useSelectedLayoutSegment();
 
-  return (
-    <div className="flex relative w-0 h-0">
-   
-        <aside
-        className={`bg-gray-800 text-white w-64 min-h-screen transition-transform duration-300 ${
-          isSidebarOpen ? '' : '-translate-x-64'
-        }`}
-      >
-        <nav className="py-4 px-6 text-center">
-            <Image 
-            // src={}
-            alt="user name"
-            objectFit="cover" // change to suit your needs
-            className="mx-auto rounded-full bg-black h-20 w-20" // just an example
-            />
-          
-          <ul className="space-y-2 mt-24 flex flex-col gap-10">
-            <li className='w-full'>
-              <Link href="/dashboard" className='box-border px-11 py-3 bg-white text-black rounded hover:bg-black hover:text-white'>
-                  h-file
-              </Link>
-            </li>
-            <li className='mb-10'>
-              <Link href="/dashboard/projects" className='my-4 px-5 py-3 bg-white text-black rounded hover:bg-black hover:text-white'>
-                  project room
-              </Link>
-            </li>
-            <li className='mb-10'>
-              <Link href="/dashboard/settings" className='my-4 px-10 py-3 bg-white text-black rounded hover:bg-black hover:text-white'>
-                  market
-              </Link>
-            </li>
-            <li className='mb-10'>
-              <Link href="/dashboard/settings" className='my-4 px-12 py-3 bg-white text-black rounded hover:bg-black hover:text-white'>
-                  feed
-              </Link>
-            </li>
+  const sidebarOptions = [
+    {name: "dashboard", href: "/dashboard", icon:Wallet2, current: !segment ? true : false},
+    {name: "project room", href: "/dashboard/project-room", icon:Workflow, current: `/${segment}` === "/project-room" ? true : false},
+    {name: "market", href: "/dashboard/market", icon:ShoppingCart, current: `/${segment}` === "/market" ? true : false},
+    {name: "feeds", href: "/dashboard/feeds", icon:Bell, current: `/${segment}` === "/feeds" ? true : false},
+    // {name: "disconnect", href: "/dashboard", current: true, icon:Unplug},
+  ]
 
-          <hr className='divide-y-0 divide-slate-50' />
+  return(
+    <div className="p-3">
+      <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-72 lf:flex-col">
+        <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-4 border-r-2">
+          <div className="flex h-16 shrink-0 items-center">
+            <h1 className="text-3xl font-bold">Logo</h1>
+          </div>
+          <nav className="flex flex-1 flex-col">
+            <ul role="list" className="flex flex-1 flex-col gap-y-7">
+              <li>
+                <ul role="list" className="-mx-2 space-y-1">
+                  {sidebarOptions.map((option) => (
+                    <li key={option.name}>
+                        <Link href={option.href} className={classNames(option.current ? "bg-gray-700 text-white" : "text-gray-400 hover:text-white hover:bg-gray-400", "group flex gap-x-3 p-2 rounded-md text-sm font-semibold" )}>
+                      <option.icon  className="text-gray-300 group-hover:text-white h-6 w-6 shrink-0"/>
+                      {option.name}
+                        </Link>
+                    </li>
+                  ))
+                  }
+                </ul>
+              </li>
+            </ul>
+          </nav>
 
-            {isConnected ? (
-              <button
-          onClick={ ()=>{}}
-          className="block my-10 px-4 py-2 mt-4 mx-2 bg-red-500 text-white rounded hover:bg-red-600"
-        >
-          {isConnected && 'disconnect'}
-        </button>
-            ) : null}
-          </ul>
-        </nav>
-        
-      </aside>
+        </div>
+      </div>
     </div>
-  );
-};
+  )
+}
 
 export default Sidebar;
