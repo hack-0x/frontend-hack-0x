@@ -7,7 +7,7 @@ type Props = {
 
 const layout = (props: Props) => {
     return(
-        <div className="flex mx-auto w-full">
+        <div className="flex mx-auto my-auto w-full bg-black">
             <div>
             <Sidebar/>
             </div>

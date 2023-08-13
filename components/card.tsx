@@ -12,7 +12,7 @@ interface CustomCardProps {
   username: string;
   projectName: string;
   projectDescription: string;
-  labels: Label[];
+  labels?: Label[];
   logoSrc: string;
 }
 
@@ -33,7 +33,7 @@ const CustomCard: React.FC<> = ({
       <h2 className="mt-3 text-lg font-semibold">{projectName}</h2>
       <p className="text-sm mt-1">{projectDescription}</p>
       <div className="grid grid-cols-3 gap-4 mt-3">
-        {labels.map((label, index) => (
+        {labels && labels.map((label, index) => (
           <div className='grid gap-2 mt-3' key={index}>
             <strong>{label.label}:</strong> {label.value}
           </div>
