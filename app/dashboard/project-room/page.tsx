@@ -43,13 +43,13 @@ const Page = () => {
                 <h1 className='text-4xl text-white mb-6'>1. project cover</h1>
                   <label className='text-white text-2xl font-bold'>
                     title:
-                <input className='ml-6' type="text" name="name" value={formData.name} onChange={handleInputChange} />
+                <input className='ml-6 text-black text-lg' type="text" name="name" value={formData.name} onChange={handleInputChange} />
                   </label>
                   <br />
 
                   <label className='text-2xl font-bold text-white'>
                     description:
-                    <textarea className='ml-6' id="desc" name="description" value={formData.description} rows={4} cols={30} onChange={(e)=>handleInputChange(e)}/>
+                    <textarea className='ml-6 text-black text-lg' id="desc" name="description" value={formData.description} rows={4} cols={30} onChange={(e)=>handleInputChange(e)}/>
 
                   {/* <input className='ml-6' type="number" name="age" value={formData.age} onChange={handleInputChange} /> */}
                   </label>
@@ -63,7 +63,7 @@ const Page = () => {
 
                   <label className='text-2xl font-bold text-white'>
                     area of interest:
-                  <input className='ml-6' placeholder='nft, defi, protocol, zk & aa, dapp, infra...' type="string" name="area" value={formData.area} onChange={handleInputChange} />
+                  <input className='ml-6 text-black text-lg' placeholder='nft, defi, protocol, zk & aa, dapp, infra...' type="string" name="area" value={formData.area} onChange={handleInputChange} />
                   </label>
                   <hr className='color-white my-10' />
                 </div>
@@ -73,7 +73,7 @@ const Page = () => {
                 <h1 className='text-4xl text-white mb-6'>3. skills needed</h1>
                 <label className='text-2xl font-bold text-white'>
                     skills:
-                  <input className='ml-6' placeholder='devops, management, mobile, tokenomics, governance, smart contracts, game theory, etc..' type="string" name="skills" value={formData.skills} onChange={handleInputChange} />
+                  <input className='ml-6 text-black text-lg' placeholder='devops, management, mobile, tokenomics, governance, smart contracts, game theory, etc..' type="string" name="skills" value={formData.skills} onChange={handleInputChange} />
                   </label>
                   <hr className='color-white my-10' />
                 </div>
@@ -83,7 +83,7 @@ const Page = () => {
                 <h1 className='text-4xl text-white mb-6'>4. contributors</h1>
                   <label className='text-white text-2xl font-bold'>
                     max. members:
-                <input className='ml-6' type="number" name="membersLimit" value={formData.membersLimit} onChange={handleInputChange} />
+                <input className='ml-6 text-black text-lg' type="number" name="membersLimit" value={formData.membersLimit} onChange={handleInputChange} />
                   </label>
                   <br />
                   <hr className='color-white my-10' />
@@ -94,13 +94,13 @@ const Page = () => {
                 <h1 className='text-4xl text-white mb-6'>5. project value</h1>
                   <label className='text-white text-2xl font-bold'>
                     predictive value:
-                <input className='ml-6' type="number" name="pvalue" value={formData.pvalue} onChange={handleInputChange} />
+                <input className='ml-6 text-black text-lg' type="number" name="pvalue" value={formData.pvalue} onChange={handleInputChange} />
                   </label>
                   <br />
 
                   <label className='text-2xl font-bold text-white'>
                     funding target:
-                  <input className='ml-6' type="string" name="fundTarget" value={formData.fundTarget} onChange={handleInputChange} />
+                  <input className='ml-6 text-black text-lg' type="string" name="fundTarget" value={formData.fundTarget} onChange={handleInputChange} />
                   </label>
                   <hr className='color-white my-10' />
                 </div>
