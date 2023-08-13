@@ -20,16 +20,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-
-// import React from 'react';
-
-// function MyApp({ Component, pageProps }) {
-//   return (
-//     <Web3ProviderWrapper>
-//       <Component {...pageProps} />
-//     </Web3ProviderWrapper>
-//   );
-// }
-
-// export default MyApp;
