@@ -1,7 +1,7 @@
 "use client"
 
 import { useSelectedLayoutSegment } from "next/navigation"
-import { Wallet2, Workflow, ShoppingCart, Bell, Unplug } from "lucide-react"
+import { Wallet2, Workflow, ShoppingCart, Bell, Unplug, Settings } from "lucide-react"
 import Link from "next/link"
 
 function classNames(...classes: string[]) {
@@ -16,6 +16,7 @@ const Sidebar = () => {
     {name: "project room", href: "/dashboard/project-room", icon:Workflow, current: `/${segment}` === "/project-room" ? true : false},
     {name: "market", href: "/dashboard/market", icon:ShoppingCart, current: `/${segment}` === "/market" ? true : false},
     {name: "feeds", href: "/dashboard/feeds", icon:Bell, current: `/${segment}` === "/feeds" ? true : false},
+    {name: "settings", href: "/dashboard/settings", icon:Settings, current: `/${segment}` === "/settings" ? true : false},
     // {name: "disconnect", href: "/dashboard", current: true, icon:Unplug},
   ]
 
@@ -24,7 +25,7 @@ const Sidebar = () => {
       <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-72 lf:flex-col">
         <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-4 border-r-2">
           <div className="flex h-16 shrink-0 items-center">
-            <h1 className="text-3xl font-bold">Logo</h1>
+            <h1 className="text-3xl font-bold">hack-0x</h1>
           </div>
           <nav className="flex flex-1 flex-col">
             <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -41,7 +42,7 @@ const Sidebar = () => {
                   }
                 </ul>
               </li>
-            </ul>
+            </ul>                
           </nav>
 
         </div>

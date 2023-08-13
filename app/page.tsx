@@ -78,6 +78,7 @@ export default function Home() {
       {/* todo: blur the main for the new user to show modal */}
       {modalOpen &&
       <Manifesto handleModalClose={closeModal} isOpen={modalOpen}/>}
+
     </main>
   )
 }
