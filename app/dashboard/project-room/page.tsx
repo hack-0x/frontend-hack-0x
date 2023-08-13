@@ -36,7 +36,7 @@ const Page = () => {
   return (
           <div className='m-auto px-6 py-24 sm:py-32 lg:px-8  lg:pl-72'>
             <div className='mx-auto max-w-2xl text-center'>
-              <form onSubmit={handleSubmit} className='text-4xl font-bold'>
+              <form onSubmit={handleSubmit} className='text-4xl font-bold font-mono'>
 
               
                 <div className='p-4 grid gap-2'>
