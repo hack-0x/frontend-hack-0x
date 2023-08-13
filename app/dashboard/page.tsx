@@ -30,7 +30,7 @@ const Page = () => {
   return (
           <div className='px-6 py-24 sm:py-32 lg:px-8 lg:pl-72 '>
 
-            <div className='mb-24 mt-10'>
+            <div className=' mb-24 mt-10'>
               {/* <h2 className='mt-2 text-4xl font-bold tracking-light text-gray-900 md:text-6xl'>Dashboard</h2> */}
               <ProfileCard 
               username={profileData.username}
