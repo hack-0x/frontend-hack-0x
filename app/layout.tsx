@@ -1,22 +1,15 @@
-import './globals.css'
-import type { Metadata } from 'next'
-// import { Web3ProviderWrapper } from '../contexts/Web3Provider';
+import './globals.css';
+import '@rainbow-me/rainbowkit/styles.css';
+import { Providers } from './providers';
 
-
-
-export const metadata: Metadata = {
-  title: 'Hack0x',
-  description: 'the status quo',
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
-  )
+  );
 }
+
+export default RootLayout;

@@ -8,7 +8,7 @@ interface Label {
 }
 
 interface CustomCardProps {
-  avatarSrc: string;
+  avatarSrc?: string;
   username: string;
   projectName: string;
   projectDescription: string;
@@ -16,7 +16,7 @@ interface CustomCardProps {
   logoSrc: string;
 }
 
-const CustomCard: React.FC<> = ({
+const CustomCard: React.FC<CustomCardProps> = ({
   avatarSrc,
   username,
   projectName,

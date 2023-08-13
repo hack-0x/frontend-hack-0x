@@ -4,6 +4,7 @@ import CustomCard from "@/components/card";
 import Image from 'next/image'
 import React, {useState} from "react";
 import Manifesto from "./new-user/page";
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 const labels = [
   { label: '#label1', value: '#skill-needed1' },
@@ -22,7 +23,7 @@ export default function Home() {
       <div className="flex justify-start gap-4 text-white text-center pb-8">
         <Image
           className="rounded-full bg-gray-100 w-10 h-10" 
-          // src={avatarSrc} 
+          src={''} 
           alt="project logo"
         />
         <div>
@@ -37,11 +38,9 @@ export default function Home() {
       </div>
       <div className="flex justify-evenly items-center">
 
-        {/* <div>
 
-        </div> */}
       <CustomCard
-        // avatarSrc={"#"}
+        avatarSrc={''}
         username="creator's name"
         projectName="project title"
         projectDescription="lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. at vero eos et accusam et justo duo."
@@ -64,11 +63,12 @@ export default function Home() {
           <p className="mt-4 mb-10">
           we use profit-sharing to disrupt the founder proprietary paradigm - and create a sustainable model for open-source and public goods".
           </p>
-          <button className="mt-6 px-4 py-2 bg-white text-black rounded hover:bg-blue-600"
+          <ConnectButton label="hack" />
+          {/* <button className="mt-6 px-4 py-2 bg-white text-black rounded hover:bg-blue-600"
               onClick={() => setModalOpen(!modalOpen)
               }  >
                 hack
-        </button>
+        </button> */}
 
         </section>
       </div>
