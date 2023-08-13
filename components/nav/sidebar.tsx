@@ -1,7 +1,7 @@
 "use client"
 
 import { useSelectedLayoutSegment } from "next/navigation"
-import { Wallet2, Workflow, ShoppingCart, Bell, Unplug, Settings } from "lucide-react"
+import { Wallet2, Workflow, ShoppingCart, Bell, Unplug, Settings, Network } from "lucide-react"
 import Link from "next/link"
 
 function classNames(...classes: string[]) {
@@ -13,10 +13,11 @@ const Sidebar = () => {
 
   const sidebarOptions = [
     {name: "dashboard", href: "/dashboard", icon:Wallet2, current: !segment ? true : false},
-    {name: "project room", href: "/dashboard/project-room", icon:Workflow, current: `/${segment}` === "/project-room" ? true : false},
+    {name: "create project", href: "/dashboard/create-project", icon:Network, current: `/${segment}` === "/create-project" ? true : false},
     {name: "market", href: "/dashboard/market", icon:ShoppingCart, current: `/${segment}` === "/market" ? true : false},
     {name: "feeds", href: "/dashboard/feeds", icon:Bell, current: `/${segment}` === "/feeds" ? true : false},
-    {name: "settings", href: "/dashboard/settings", icon:Settings, current: `/${segment}` === "/settings" ? true : false},
+    {name: "project room", href: "/dashboard/project-room", icon:Workflow, current: `/${segment}` === "/project-room" ? true : false},
+    // {name: "settings", href: "/dashboard/settings", icon:Settings, current: `/${segment}` === "/settings" ? true : false},
     // {name: "disconnect", href: "/dashboard", current: true, icon:Unplug},
   ]
 

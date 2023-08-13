@@ -25,11 +25,11 @@ const Page = () => {
   const projectOptions = [
     {username: "john", role:"frontend", title: "project name", description: "The greatest Description you could think of. A story about passion, cooperation, conflict & chaos - unveiling, word by word, a deeper truth about…",  iconURL:"/images/profileImg.svg", voucherID: "214"},
     {username: "rita", role:"smart contract", title: "project name", description: "The greatest Description you could think of. A story about passion, cooperation, conflict & chaos - unveiling, word by word, a deeper truth about…",  iconURL:"/images/profileImg.svg", voucherID: "215"},
-  ]
+  ];
+
 
   return (
           <div className='px-6 py-24 sm:py-32 lg:px-8 lg:pl-72 '>
-
             <div className=' mb-24 mt-10'>
               {/* <h2 className='mt-2 text-4xl font-bold tracking-light text-gray-900 md:text-6xl'>Dashboard</h2> */}
               <ProfileCard 
@@ -61,9 +61,7 @@ const Page = () => {
 
             </div>
 
-            
           </div>
-
   );
 };
 
