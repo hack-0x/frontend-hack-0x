@@ -20,7 +20,7 @@ interface FormData {
 
 
 const Page = () => {
-  const [formData, setFormData] = React.useState<FormData>({ name: '', age: 0 });
+  const [formData, setFormData] = React.useState<FormData>({ name: '', description: '', area: '', skills: '', membersLimit: 0, pvalue:0, fundTarget: '' });
 
     function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
     const { name, value } = event.target;
