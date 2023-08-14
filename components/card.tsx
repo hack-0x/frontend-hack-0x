@@ -27,7 +27,7 @@ const CustomCard: React.FC<CustomCardProps> = ({
   return (
     <div className="border rounded p-4 bg-white font-mono pt-10 px-6 w-[50vw] h-fit">
       <div className="flex items-center">
-        <Image className="rounded-full bg-gray-100 mr-3" src={avatarSrc} alt="User Avatar" />
+        <Image className="rounded-full bg-gray-100 mr-3" src={''} alt="User Avatar" />
         <span className='text-xl'>{username}</span>
       </div>
       <h2 className="mt-3 text-lg font-semibold">{projectName}</h2>
