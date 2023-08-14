@@ -73,18 +73,11 @@ useEffect(() =>{
           we use profit-sharing to disrupt the founder proprietary paradigm - and create a sustainable model for open-source and public goods".
           </p>
           <ConnectButton label="hack" chainStatus="none"/>
-          {/* <button className="mt-6 px-4 py-2 bg-white text-black rounded hover:bg-blue-600"
-              onClick={() => setModalOpen(!modalOpen)
-              }  >
-                hack
-        </button> */}
-
         </section>
       </div>
 
       </div> 
 
-      {/* todo: blur the main for the new user to show modal */}
       {modalOpen &&
       <Manifesto handleModalClose={closeModal} isOpen={modalOpen}/>}
 
