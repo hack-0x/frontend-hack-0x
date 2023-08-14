@@ -4,7 +4,7 @@ import "./modal.css";
 
 interface ModalProps  {
     children:  React.ReactNode;
-    isOpen: boolean;
+    isOpen?: boolean;
     handleClose: () => void;
     handleAction: () => void;
     submitButtonText: string,
