@@ -5,7 +5,7 @@ import React, {useEffect, useState} from 'react'
 import Image from 'next/image';
 import { useRouter } from 'next/navigation'
 
-interface ManifestoProps  {
+type ManifestoProps = {
     isOpen: boolean;
     handleModalClose: () => void;
 }
