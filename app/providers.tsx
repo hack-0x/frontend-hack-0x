@@ -40,7 +40,7 @@ const { wallets } = getDefaultWallets({
   chains,
 });
 
-const demoAppInfo = {
+const hack0xApp = {
   appName: 'hack-0x',
 };
 
@@ -68,7 +68,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   React.useEffect(() => setMounted(true), []);
   return (
     <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider chains={chains} appInfo={demoAppInfo}>
+      <RainbowKitProvider chains={chains} appInfo={hack0xApp}>
         {mounted && children}
       </RainbowKitProvider>
     </WagmiConfig>
