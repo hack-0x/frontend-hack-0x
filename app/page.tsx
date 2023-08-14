@@ -70,7 +70,7 @@ useEffect(() =>{
           hack0x is a decentralized venture studio to create unsupervised, exponentially innovative projects in the web3 space.
           </p>
           <p className="mt-4 mb-10">
-          we use profit-sharing to disrupt the founder proprietary paradigm - and create a sustainable model for open-source and public goods".
+          we use profit-sharing to disrupt the founder proprietary paradigm - and create a sustainable model for open-source and public goods.
           </p>
           <ConnectButton label="hack" chainStatus="none"/>
         </section>

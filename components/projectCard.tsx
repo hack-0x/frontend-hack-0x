@@ -20,7 +20,7 @@ const ProjectCards: React.FC<{projects: ProjectArray }> = ({projects}) => {
             <div className='gap-2 w-'>
               <div className="grid grid-cols-2 gap-4 font-mono">
               {projects.map((project)=> (
-              <div className='border border-solid p-2 bg-white text-black border-white rounded-sm'>
+              <div key={project?.voucherID} className='border border-solid p-2 bg-white text-black border-white rounded-sm'>
                 <div className='flex flex-row justify-between py-2'>
                 <h1 className='text-lg font-bold'>{project.title}</h1>
                 <p>date</p>
