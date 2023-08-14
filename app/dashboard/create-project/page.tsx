@@ -49,7 +49,7 @@ const CreateProject = () => {
 
                   <label className='text-2xl font-bold text-white'>
                     description:
-                    <textarea className='ml-6 text-black text-lg' id="desc" name="description" value={formData.description} rows={4} cols={30} onChange={(e)=>handleInputChange(e)}/>
+                    <textarea className='ml-6 text-black text-lg' id="desc" name="description" value={formData.description} rows={4} cols={30} onChange={(e)=>handleInputChange}/>
 
                   {/* <input className='ml-6' type="number" name="age" value={formData.age} onChange={handleInputChange} /> */}
                   </label>
