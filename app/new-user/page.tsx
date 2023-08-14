@@ -10,7 +10,7 @@ type ManifestoProps = {
     handleModalClose: () => void;
 }
 
-const Manifesto = ({
+export const Manifesto = ({
     isOpen,
     handleModalClose
 }: ManifestoProps) => {
@@ -106,4 +106,4 @@ const Manifesto = ({
   )
 }
 
-export default Manifesto
+// export default Manifesto
